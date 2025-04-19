@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore World - Tourism Package</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Explore<span>World</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#guides">Guides</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="loginBtn" class="btn login-btn">Login</button>
+                <button id="signupBtn" class="btn signup-btn">Sign Up</button>
+                <div id="userProfile" class="user-profile hidden">
+                    <img src="/api/placeholder/40/40" alt="User Profile">
+                    <span>Welcome, <span id="username">User</span></span>
+                </div>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <!-- <img src="https://th.bing.com/th/id/R.f601c9dea6e99051c21aaa80b5eafff3?rik=LN2OPeWqXn6s%2bQ&riu=http%3a%2f%2fimages.mini-ielts.com%2fimages%2f1%2f18%2ftourism.jpg&ehk=WgZjO38H3hZyWaqzz2Alcy28qnqzgkEROtYpljo%2b8Xo%3d&risl=&pid=ImgRaw&r=0" alt="image"> -->
+            <h1>Discover the World's Beauty</h1>
+            <p>Explore breathtaking destinations with our premium guided tours</p>
+            <div class="search-container">
+                <input type="text" placeholder="Where do you want to go?">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+ 
+      
+      
+
+    <section id="destinations" class="destinations">
+        <div class="section-header">
+            <h2>Popular Destinations</h2>
+            <p>Explore our most sought-after locations around the globe</p>
+        </div>
+        <div class="destinations-grid">
+            <div class="destination-card">
+                <img src="https://wallpaperaccess.com/full/1137644.jpg" alt="Paris">
+                <div class="destination-info">
+                    <h3>Paris, France</h3>
+                    <p>The City of Light awaits with its iconic landmarks</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Europe</span>
+                    </div>
+                    <button class="btn view-btn">View Details</button>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.ShZdQbYWtQHokK39wG-2KgHaEK?rs=1&pid=ImgDetMain" alt="Bali">
+                <div class="destination-info">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Tropical paradise with stunning beaches and culture</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-star"></i> 4.7</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Asia</span>
+                    </div>
+                    <button class="btn view-btn">View Details</button>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://wallpapercave.com/wp/xJxw4LI.jpg" alt="New York">
+                <div class="destination-info">
+                    <h3>New York, USA</h3>
+                    <p>The city that never sleeps offers endless adventures</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-star"></i> 4.6</span>
+                        <span><i class="fas fa-map-marker-alt"></i> North America</span>
+                    </div>
+                    <button class="btn view-btn">View Details</button>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.RpohaYccrE9vt0xONQVeYQHaE8?rs=1&pid=ImgDetMain" alt="Santorini">
+                <div class="destination-info">
+                    <h3>Santorini, Greece</h3>
+                    <p>White-washed buildings with spectacular sea views</p>
+                    <div class="destination-meta">
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Europe</span>
+                    </div>
+                    <button class="btn view-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <button class="btn view-all-btn">View All Destinations</button>
+        </div>
+    </section>
+
+    <section id="packages" class="packages">
+        <div class="section-header">
+            <h2>Our Premium Packages</h2>
+            <p>All-inclusive experiences designed for unforgettable memories</p>
+        </div>
+        <div class="package-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="adventure">Adventure</button>
+            <button class="filter-btn" data-filter="relaxation">Relaxation</button>
+            <button class="filter-btn" data-filter="cultural">Cultural</button>
+            <button class="filter-btn" data-filter="family">Family</button>
+        </div>
+        <div class="packages-grid">
+            <div class="package-card" data-category="adventure">
+                <div class="package-image">
+                    <img src="https://i.pinimg.com/originals/7e/0e/1b/7e0e1b9096f830fd37468fb72e2968da.jpg" alt="Adventure Package">
+                    <div class="package-badge">Best Seller</div>
+                </div>
+                <div class="package-content">
+                    <h3>European Explorer</h3>
+                    <div class="package-meta">
+                        <span><i class="fas fa-clock"></i> 14 Days</span>
+                        <span><i class="fas fa-users"></i> Max 12 People</span>
+                    </div>
+                    <p>Experience the best of Europe with visits to 6 countries</p>
+                    <div class="package-features">
+                        <span><i class="fas fa-check"></i> Guided Tours</span>
+                        <span><i class="fas fa-check"></i> Luxury Hotels</span>
+                        <span><i class="fas fa-check"></i> Transportation</span>
+                        <span><i class="fas fa-check"></i> Selected Meals</span>
+                    </div>
+                    <div class="package-price">
+                        <span class="price">$2,499</span>
+                        <span class="per-person">per person</span>
+                    </div>
+                    <button class="btn book-btn" data-package="european-explorer">Book Now</button>
+                </div>
+            </div>
+            <div class="package-card" data-category="relaxation">
+                <div class="package-image">
+                    <img src="https://wallpaperaccess.com/full/2551173.jpg" alt="Relaxation Package">
+                </div>
+                <div class="package-content">
+                    <h3>Tropical Paradise</h3>
+                    <div class="package-meta">
+                        <span><i class="fas fa-clock"></i> 7 Days</span>
+                        <span><i class="fas fa-users"></i> Max 10 People</span>
+                    </div>
+                    <p>Unwind in the white sandy beaches of the Maldives</p>
+                    <div class="package-features">
+                        <span><i class="fas fa-check"></i> Beach Access</span>
+                        <span><i class="fas fa-check"></i> Spa Treatment</span>
+                        <span><i class="fas fa-check"></i> All-Inclusive</span>
+                        <span><i class="fas fa-check"></i> Water Activities</span>
+                    </div>
+                    <div class="package-price">
+                        <span class="price">$1,899</span>
+                        <span class="per-person">per person</span>
+                    </div>
+                    <button class="btn book-btn" data-package="tropical-paradise">Book Now</button>
+                </div>
+            </div>
+            <div class="package-card" data-category="cultural">
+                <div class="package-image">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.i4ozBNRSKBwT8tbFazbT8gHaFP?rs=1&pid=ImgDetMain" alt="Cultural Package">
+                </div>
+                <div class="package-content">
+                    <h3>Ancient Treasures</h3>
+                    <div class="package-meta">
+                        <span><i class="fas fa-clock"></i> 10 Days</span>
+                        <span><i class="fas fa-users"></i> Max 15 People</span>
+                    </div>
+                    <p>Discover the ancient wonders of Egypt and Jordan</p>
+                    <div class="package-features">
+                        <span><i class="fas fa-check"></i> Expert Guides</span>
+                        <span><i class="fas fa-check"></i> Site Entries</span>
+                        <span><i class="fas fa-check"></i> Comfortable Hotels</span>
+                        <span><i class="fas fa-check"></i> Cultural Events</span>
+                    </div>
+                    <div class="package-price">
+                        <span class="price">$2,199</span>
+                        <span class="per-person">per person</span>
+                    </div>
+                    <button class="btn book-btn" data-package="ancient-treasures">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="guides" class="guides">
+        <div class="section-header">
+            <h2>Our Expert Guides</h2>
+            <p>Meet the passionate professionals who will enhance your travel experience</p>
+        </div>
+        <div class="guides-carousel">
+            <div class="guide-card">
+                <div class="guide-image">
+                    <img src="https://wallpaperaccess.com/full/2631696.jpg" alt="Guide John">
+                </div>
+                <div class="guide-info">
+                    <h3>John Williams</h3>
+                    <p class="guide-title">European Specialist</p>
+                    <p class="guide-desc">John has 15 years of experience leading tours across Europe with expertise in art history.</p>
+                    <div class="guide-languages">
+                        <span>English</span>
+                        <span>French</span>
+                        <span>Italian</span>
+                    </div>
+                    <button class="btn guide-profile-btn">View Profile</button>
+                </div>
+            </div>
+            <div class="guide-card">
+                <div class="guide-image">
+                    <img src="https://wallpapercave.com/wp/wp6893093.jpg" alt="Guide Maria">
+                </div>
+                <div class="guide-info">
+                    <h3>Maria Rodriguez</h3>
+                    <p class="guide-title">Latin America Expert</p>
+                    <p class="guide-desc">Maria is a native of Argentina with deep knowledge of South American cultures and landscapes.</p>
+                    <div class="guide-languages">
+                        <span>English</span>
+                        <span>Spanish</span>
+                        <span>Portuguese</span>
+                    </div>
+                    <button class="btn guide-profile-btn">View Profile</button>
+                </div>
+            </div>
+            <div class="guide-card">
+                <div class="guide-image">
+                    <img src="https://th.bing.com/th/id/OIP.VXro6A8EIn0GrH2eP1NpoQHaEK?rs=1&pid=ImgDetMain" alt="Guide Akira">
+                </div>
+                <div class="guide-info">
+                    <h3>Akira Tanaka</h3>
+                    <p class="guide-title">Asia Specialist</p>
+                    <p class="guide-desc">Akira has been introducing travelers to Asian cultures for over a decade with insider knowledge.</p>
+                    <div class="guide-languages">
+                        <span>English</span>
+                        <span>Japanese</span>
+                        <span>Mandarin</span>
+                    </div>
+                    <button class="btn guide-profile-btn">View Profile</button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="section-header">
+            <h2>What Our Travelers Say</h2>
+            <p>Authentic experiences from our satisfied customers</p>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The European Explorer package exceeded all expectations. Our guide John was knowledgeable and made the experience truly special. The accommodations were first-class!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="/api/placeholder/60/60" alt="Customer">
+                    <div>
+                        <h4>Sarah Johnson</h4>
+                        <p>Traveled to Europe, June 2024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The Tropical Paradise tour was truly life-changing. The private beaches, luxurious resort, and attentive service made this the perfect honeymoon getaway."</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="/api/placeholder/60/60" alt="Customer">
+                    <div>
+                        <h4>Michael & Lisa Chen</h4>
+                        <p>Traveled to Maldives, August 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest deals and travel inspiration delivered directly to your inbox</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" placeholder="Your Email Address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Explore<span>World</span></h2>
+                <p>Your gateway to extraordinary travel experiences</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#packages">Tour Packages</a></li>
+                        <li><a href="#guides">Travel Guides</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Flight Booking</a></li>
+                        <li><a href="#">Hotel Reservations</a></li>
+                        <li><a href="#">Guided Tours</a></li>
+                        <li><a href="#">Travel Insurance</a></li>
+                        <li><a href="#">Transportation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ExploreWorld. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Login</h2>
+                <p>Welcome back! Please login to your account</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn login-submit">Login</button>
+                <div class="social-login">
+                    <p>Or login with</p>
+                    <div class="social-login-buttons">
+                        <button type="button" class="social-btn google"><i class="fab fa-google"></i> Google</button>
+                        <button type="button" class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                    </div>
+                </div>
+                <p class="switch-form">Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Create Account</h2>
+                <p>Join us to discover amazing travel experiences</p>
+            </div>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="termsCheck" name="terms" required>
+                    <label for="termsCheck">I agree to the <a href="#">Terms & Conditions</a></label>
+                </div>
+                <button type="submit" class="btn signup-submit">Create Account</button>
+                <div class="social-login">
+                    <p>Or sign up with</p>
+                    <div class="social-login-buttons">
+                        <button type="button" class="social-btn google"><i class="fab fa-google"></i> Google</button>
+                        <button type="button" class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                    </div>
+                </div>
+                <p class="switch-form">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Tour Details Modal -->
+    <div id="tourDetailsModal" class="modal">
+        <div class="modal-content tour-details-modal">
+            <span class="close-modal">&times;</span>
+            <div class="tour-details-container">
+                <div class="tour-gallery">
+                    <div class="main-image">
+                        <img src="/api/placeholder/600/400" alt="Tour Main Image" id="tourMainImage">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="/api/placeholder/120/80" alt="Thumbnail 1" class="thumbnail active">
+                        <img src="/api/placeholder/120/80" alt="Thumbnail 2" class="thumbnail">
+                        <img src="/api/placeholder/120/80" alt="Thumbnail 3" class="thumbnail">
+                        <img src="/api/placeholder/120/80" alt="Thumbnail 4" class="thumbnail">
+                    </div>
+                </div>
+                <div class="tour-info">
+                    <h2 id="tourName">European Explorer</h2>
+                    <div class="tour-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> <span id="tourLocations">Multiple Countries, Europe</span></span>
+                        <span><i class="fas fa-clock"></i> <span id="tourDuration">14 Days</span></span>
+                        <span><i class="fas fa-users"></i> <span id="tourGroupSize">Max 12 People</span></span>
+                    </div>
+                    <div class="tour-rating">
+                        <span class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </span>
+                        <span class="rating-text">4.8/5 (124 reviews)</span>
+                    </div>
+                    <div class="tour-description">
+                        <h3>About This Tour</h3>
+                        <p id="tourDescription">Experience the best of Europe with visits to 6 countries including France, Italy, Switzerland, Germany, Netherlands, and Belgium. This comprehensive tour takes you through iconic cities, picturesque villages, and stunning landscapes with expert guides to enhance your journey.</p>
+                    </div>
+                    <div class="tour-highlights">
+                        <h3>Tour Highlights</h3>
+                        <ul id="tourHighlights">
+                            <li>Guided tour of the Louvre Museum in Paris</li>
+                            <li>Gondola ride in Venice</li>
+                            <li>Swiss Alps experience with cable car ride</li>
+                            <li>Rhine River cruise in Germany</li>
+                            <li>Chocolate and cheese tasting experiences</li>
+                            <li>Skip-the-line access to major attractions</li>
+                        </ul>
+                    </div>
+                    <div class="tour-inclusions">
+                        <h3>What's Included</h3>
+                        <div class="inclusions-grid" id="tourInclusions">
+                            <div class="inclusion-item">
+                                <i class="fas fa-hotel"></i>
+                                <span>13 nights accommodation</span>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>Daily breakfast & 7 dinners</span>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-bus"></i>
+                                <span>Luxury coach transportation</span>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Professional tour guide</span>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-ticket-alt"></i>
+                                <span>Entrance fees to attractions</span>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-plane-departure"></i>
+                                <span>Airport transfers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-booking">
+                    <div class="price-box">
+                        <div class="current-price">
+                            <span class="price-label">Price</span>
+                            <span class="price-value" id="tourPrice">$2,499</span>
+                            <span class="price-per">per person</span>
+                        </div>
+                        <div class="old-price">
+                            <span>Regular price: </span>
+                            <span class="strikethrough">$2,899</span>
+                        </div>
+                        <div class="savings">
+                            <span>You save: $400</span>
+                        </div>
+                    </div>
+                    <div class="booking-form">
+                        <h3>Book This Tour</h3>
+                        <form id="bookingForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="departureDate">Departure Date</label>
+                                    <input type="date" id="departureDate" name="departureDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="travelers">Travelers</label>
+                                    <input type="number" id="travelers" name="travelers" min="1" value="2" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn check-availability">Check Availability</button>
+                            </div>
+                            <div class="available-options hidden" id="availableOptions">
+                                <h4>Available Options</h4>
+                                <div class="option-item">
+                                    <input type="radio" id="option1" name="tourOption" value="option1">
+                                    <label for="option1">May 15, 2025 - May 28, 2025</label>
+                                    <span class="option-price">$2,499</span>
+                                </div>
+                                <div class="option-item">
+                                    <input type="radio" id="option2" name="tourOption" value="option2">
+                                    <label for="option2">June 5, 2025 - June 18, 2025</label>
+                                    <span class="option-price">$2,699</span>
+                                </div>
+                                <div class="option-item">
+                                    <input type="radio" id="option3" name="tourOption" value="option3">
+                                    <label for="option3">July 10, 2025 - July 23, 2025</label>
+                                    <span class="option-price">$2,899</span>
+                                </div>
+                            </div>
+                            <div class="total-price hidden" id="totalPrice">
+                                <span>Total Price: </span>
+                                <span class="price-value">$4,998</span>
+                            </div>
+                            <button type="submit" class="btn book-now">Book Now</button>
+                        </form>
+                    </div>
+                    <div class="booking-help">
+                        <h4>Need Help?</h4>
+                        <p>Our travel specialists are here to assist you</p>
+                        <div class="help-contact">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (800) 555-1234</span>
+                        </div>
+                        <div class="help-contact">
+                            <i class="fas fa-envelope"></i>
+                            <span>bookings@exploreworld.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hotel Booking Modal -->
+    <div id="hotelBookingModal" class="modal">
+        <div class="modal-content hotel-booking-modal">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Hotel Booking</h2>
+                <p>Find and book your perfect accommodation</p>
+            </div>
+            <div class="hotel-search-form">
+                <form id="hotelSearchForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <input type="text" id="destination" name="destination" placeholder="City, Country" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkIn">Check In</label>
+                            <input type="date" id="checkIn" name="checkIn" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkOut">Check Out</label>
+                            <input type="date" id="checkOut" name="checkOut" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rooms">Rooms</label>
+                            <input type="number" id="rooms" name="rooms" min="1" value="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="adults">Adults</label>
+                            <input type="number" id="adults" name="adults" min="1" value="2" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="children">Children</label>
+                            <input type="number" id="children" name="children" min="0" value="0">
+                        </div>
+                    </div>
+                    <div class="form-row">**
